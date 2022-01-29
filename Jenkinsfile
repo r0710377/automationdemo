@@ -15,13 +15,13 @@ node(){
             sh 'npm run build'
             echo "Build completed"
         }
-      
-     stage('test') {
+    }
+  
+   stage('Build') {
         nodejs('nodejs') {
             sh 'npm run test'
-            echo "Succesfully passed tests"
+            echo "Tests completed"
         }
-        
     }
 
     stage('Package Build') {
