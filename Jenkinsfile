@@ -19,6 +19,7 @@ node(){
   
    stage('Build') {
         nodejs('nodejs') {
+            sh 'DISPLAY:0 firefox'
             sh 'npm run test'
             echo "Tests completed"
         }
