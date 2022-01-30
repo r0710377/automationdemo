@@ -44,7 +44,7 @@ node(){
         echo 'Artifacts copied'
 
         echo 'Copy'
-        sh "yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz"
+        sh "yes | cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz"
         echo 'Copy completed'
     }
 }
