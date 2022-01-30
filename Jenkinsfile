@@ -12,7 +12,6 @@ node(){
     }
     stage('Build') {
         nodejs('nodejs') {
-            sh 'cd /cloudwine-frontend'
             sh 'npm run build'
             echo "Build completed"
         }
