@@ -19,8 +19,6 @@ node(){
   
    stage('Build') {
         nodejs('nodejs') {
-            sh 'sudo startx'
-            sh 'firefox'
             sh 'npm run test'
             echo "Tests completed"
         }
