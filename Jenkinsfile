@@ -12,6 +12,7 @@ node(){
     }
     stage('Build') {
         nodejs('nodejs') {
+            sh 'cd /cloudwine-frontend'
             sh 'npm run build'
             echo "Build completed"
         }
@@ -38,7 +39,7 @@ node(){
         stash allowEmpty: true, includes: 'bundle.tar.gz', name: 'buildArtifacts'
     }
   
-    stage('Unstash') {
+    stage('Deploy') {
         echo 'Unstash'
         unstash 'buildArtifacts'
         echo 'Artifacts copied'
